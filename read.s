@@ -15,7 +15,7 @@ on_error:
 	neg rax
 	mov r8, rax
 	call __errno_location wrt ..plt
-		;rax now holds errno's address, r8 its value
+		;rax now holds errno's address, r8 its stashed value
 	mov [rax], r8
 	mov rax, 1
 	neg rax

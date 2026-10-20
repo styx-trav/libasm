@@ -12,13 +12,9 @@ ft_calloc:
 	cmp rdx, 0
 	jne on_error
 	mov rdi, rax
-		;stack set up
-	push rbp
-	mov rbp, rsp
-	sub rsp, 8
+		;stash res in r8 pre malloc call
+	mov r8, rax
 	call malloc wrt ..plt
-		;stack realignment
-	leave
 		;on null return
 	cmp rax, 0
 	je ender

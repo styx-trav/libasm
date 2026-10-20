@@ -2,8 +2,8 @@ extern __errno_location
 global ft_write
 section .data
 section .text
-		;syscall write requires :: rax 1; rdi fd; rsi str; rdx strlen
 		;arguments are received :: rdi fd; rsi str; rdx strlen
+		;syscall write requires :: rax 1; rdi fd; rsi str; rdx strlen
 ft_write:
 	mov rax, 1	;syscall write number
 	syscall

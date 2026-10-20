@@ -1,11 +1,11 @@
 global ft_strcmp
 section .data
 section .text
-	;assumedly we get s1 in rdi and s2 in rsi
-	;we'll use rdx as our inc memory checker
+	;we get s1 in rdi and s2 in rsi
+	;we use rdx as our inc memory checker
 	;and rax, rcx as our sub s1[i], s2[i] holders
 ft_strcmp:
-		;first check :: are our guys the same pointers
+		;first check :: are they the same pointers
 	mov rax, rdi
 	sub rax, rsi
 	jz ender
